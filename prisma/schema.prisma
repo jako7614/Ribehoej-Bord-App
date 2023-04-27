@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+model Dish {
+  id      Int    @id @default(autoincrement())
+  TableId Int?
+  state   Json?  
+  Table   Table? @relation(fields: [TableId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_Dish_Table_TableId")
+
+  @@index([TableId], map: "IX_Dish_TableId")
+}
+
+model Guest {
+  id      Int     @id @default(autoincrement())
+  tableId Int?
+  nuts    Boolean
+  lactose Boolean
+  gluten  Boolean
+  shell   Boolean
+  Table   Table?  @relation(fields: [tableId], references: [id], onUpdate: NoAction)
+
+  @@index([tableId], map: "Guest_tableId_fkey")
+}
+
+model Preset {
+  id      Int   @id @default(autoincrement())
+  number  Int
+  room    Int
+  content Json?
+}
+
+model Table {
+  id        Int       @id @default(autoincrement())
+  top       Float?
+  left      Float?
+  moved     Boolean
+  started   Boolean
+  room      Int?
+  note      String?
+  updatedAt DateTime  @default(now())
+  startedAt DateTime?
+  dishes    Dish[]
+  guests    Guest[]
+  prepared  Boolean
+}
+
+model EFMigrationsHistory {
+  MigrationId    String @id @db.VarChar(150)
+  ProductVersion String @db.VarChar(32)
+
+  @@map("__EFMigrationsHistory")
+}

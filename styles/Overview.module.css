@@ -1,0 +1,52 @@
+.trapezoid {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    background: rgb(255, 181, 113);
+    height: 300px;
+    width: 578px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+}
+
+.trapezoid:hover {
+    background: rgb(255, 139, 31);
+    cursor: pointer;
+}
+
+.sidepieces {
+    margin: -270px;
+}
+
+.left {    
+    transform: rotate(60deg);
+    margin-top: -215px;
+}
+
+.middle {
+    margin-top: 410px;
+}
+
+.right {    
+    transform: rotate(300deg);
+    margin-top: -212px;
+}
+.wrapper {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backface-visibility: hidden
+}
+
+.title {
+    font-size: 72px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}

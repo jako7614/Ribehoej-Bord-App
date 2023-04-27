@@ -1,0 +1,370 @@
+.main {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.tableBoard {    
+  background: beige;
+  max-width: 1400px;
+  height: 800px;
+  box-shadow: 0px 0px 30px 30px rgb(0 0 0 / 50%);
+  margin: 25px 0% 0% 150px;
+}
+
+#ForceFlex {
+  display: flex !important;
+}
+
+.numberInput {
+  width: 3.5vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+.buttonBox {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 260px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 24px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  background: #CCCCCC;
+  width: 75px;
+  height: 50px;
+  border-radius: 4px;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+#SelecterDiv {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5vw;
+  margin-bottom: 10px;
+}
+
+.DishSelecterDiv {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  margin: 0;
+}
+
+.GuestSelecterDiv {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  margin: 0;
+}
+
+.GuestSelecterDiv div {
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  width: 3vw;
+  background-color: white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.GuestSelecterDiv button {
+  height: 3vw;
+  width: 3vw;
+  background-color: white;
+  border: none;
+  font-size: 36px;
+  border: 1px solid black;
+}
+
+.DishSelecterDiv div {
+  display: flex;
+  justify-content: center;
+  width: 3vw;
+  background-color: white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.DishSelecterDiv button {
+  height: 3vw;
+  width: 3vw;
+  background-color: white;
+  border: none;
+  font-size: 36px;
+  border: 1px solid black;
+}
+
+
+
+.Modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: lightgray;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 40%);
+  width: 50vw;
+  height: 30vw;
+  top: 25%;
+  left: 25%;
+}
+
+#ModalAllergiesHeaders {
+  display: flex;
+  justify-content: space-around;
+  align-self: flex-end;
+  width: 75%;
+  font-size: 0.8vw;
+}
+
+#ModalAllergiesHeaders h2 {
+  margin: 0;
+  font-weight: normal;
+  width: 80px;
+  text-align: center;
+}
+
+#ModalHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5vw;
+}
+
+#ModalForm {
+  display: flex;
+  flex-direction: column;
+  height: 19vw;
+  width: 90%;
+  align-items: center;
+}
+
+.ButtonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#ModalAddAllergies {
+  width: 7.5vw;
+  align-self: flex-start;
+  height: 5vw;
+  font-size: 1.5vw;
+  border: none;
+  background: rgb(76, 202, 252);
+  color: white;
+  border-radius: 12px;
+}
+
+#ModalFooter {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  gap: 1vw;
+  margin-top: 1vw;
+}
+
+#ModalNoteTextBox {
+  display: flex;
+  justify-self: center;
+  height: 6vw;
+  width: 12vw;
+  border-radius: 12px;
+  text-align: center;
+  resize: none;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.AllergicGuestList {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: auto;
+  gap: 0.5vw;
+  min-height: 10.7vw;
+}
+
+.ButtonsContainer {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 30%;
+}
+
+.ModalFooterButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 7vw;
+  height: 3.5vw;
+  background: none;
+  font-size: 1.4vw;
+  border-radius: 12px;
+}
+
+#ModalFooterAccept {
+  border: 3px solid rgb(0, 160, 0);
+  color: rgb(0, 160, 0);
+}
+
+#ModalFooterCancel {
+  border: 3px solid #DF4848;
+  color: #DF4848;
+}
+
+/* The container */
+.container {
+  display: flex;
+  width: 80px;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  top: 0;
+  left: 0;
+  height: 3vw;
+  width: 3vw;
+  background-color: #eee;
+  border: 1px solid black
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #DF4848;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 35px;
+  top: 13px;
+  width: 6px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.backgroundImage {
+  z-index: -1;
+  height: 100%;
+}
+
+.AllergicGuest {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.AllergicGuestHeader {
+  display: flex;
+  font-size: 1vw;
+}
+
+.AllergicGuestHeader h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 0;
+}
+
+.AllergicGuestSelecter {
+  display: flex;
+  width: 75%;
+  justify-content: space-around;
+}
+
+.AllergicGuestHeader button {
+  display: flex;
+  background: #DF4848;
+  border: 1px solid black;
+  width: 3vw;
+  height: 3vw;
+  font-size: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.Bounce2 {
+  animation-name: bounce2;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce2 {
+  60% { width: 210px; }
+  60% { height: 130px; }
+  100% { width: 200px; }
+  100% { height: 125px; }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(40px); opacity: 0; }
+  30% { transform: translateY(40px); opacity: 0; }
+  60%  { transform: translateY(-4px); opacity: 100%; }
+  100% { transform: translateY(0px); }
+}
+@keyframes bounce3 {
+  0%   { transform: translateY(-40px); opacity: 0; }
+  30% { transform: translateY(-40px); opacity: 0; }
+  60%  { transform: translateY(4px); opacity: 100%; }
+  100% { transform: translateY(0px); }
+}
+

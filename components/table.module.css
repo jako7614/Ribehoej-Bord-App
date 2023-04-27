@@ -1,0 +1,46 @@
+.StartButton {
+  width: 80px;
+  height: 50%;
+  border: none;
+  background-color: #42DB6B;
+  color: white;
+  border-radius: 0 0 4px 0;
+}
+
+.PrepareButton {
+  width: 80px;
+  height: 50%;
+  border: none;
+  background-color: #008DFF;
+  color: white;
+  border-radius: 0 4px 0 0;
+}
+
+.StartButton:hover {
+  background-color: #3ac25e;
+}
+
+.PrepareButton:hover {
+  background-color: #0482e9;
+}
+
+.TableContent {
+  display: none;
+}
+
+.TableContent.active {
+  display: flex;
+}
+
+.TableMidContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TableContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 110px;
+}
